@@ -52,11 +52,11 @@ div[id="homepage"]{
 div[id= "image"]{
     display: flex;
     margin-top: auto;
-    width: 100%;
+    width: 75%;
     justify-content: center;
 }
 div[id="startdiv"]{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 img[id="profile-pic"]{
     width: auto;
