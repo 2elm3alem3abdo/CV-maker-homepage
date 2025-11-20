@@ -42,13 +42,13 @@ div[id="ansdiv"]{
 }
 input[id="ans"]{
     position: absolute;
-    background-color: lightgrey;
-    border: none;
+    background-color: rgb(230,240,255);
+    border-color: black;
     border-radius: 10px;
     font-size: 200%;
     left: 50%;
     transform: translate(-50%);
-    
+    text-align: center;
 }
 h1{
     color: rgb(0, 0, 0);
@@ -116,5 +116,5 @@ button[id="next"]:hover{
 
 input[id="ans"]:hover{
     background-color: 0.2s ease-in;
-    background-color: darkgrey;
+    background-color: aliceblue;
 }
