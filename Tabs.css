@@ -45,7 +45,7 @@ input[id="ans"]{
     background-color: rgb(230,240,255);
     border-color: black;
     border-radius: 10px;
-    font-size: 200%;
+    font-size: clamp(10%, 200%, 300%);
     left: 50%;
     transform: translate(-50%);
     text-align: center;
@@ -78,7 +78,7 @@ div[id="nextbutton"]{
 
 h1[id="fill"]{
     color: white;
-    font-size: clamp(14px, 3.5vh, 24px);
+    font-size: clamp(5px, 3.5vh, 24px);
     line-height: 1.0;
     margin: 0;
     text-align: center;
