@@ -5,54 +5,99 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+
 div[id="PersonalInfoPage"]{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     background-color: rgb(230,240,255);
     width: 100%;
-    height: 75%;
+    border-top-right-radius: 75px;
+    height: 95%;
     bottom: 0;
     left: 0;
-    border-top-right-radius: 75px;
+    align-items: center;
+}
+
+div[id="QANSdivs"]{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+div[id="NextBackButtons"]{
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+}
+
+div[id="ansdiv"]{
+    margin-top: 10%;
+}
+input[id="ans"]{
+    position: absolute;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 10px;
+    font-size: 200%;
+    left: 50%;
+    transform: translate(-50%);
+    
 }
 h1{
     color: rgb(0, 0, 0);
+    text-align: center;
 }
 
-div[id="PersonalInfoFrame"]{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-div[id="startdiv"]{
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
 
 div[id="InfoTitle"]{
-    position: absolute;
-    text-align: center;
-    width: fit-content;
-    left: 50%;
-    top: 0%;
-    transform: translate(-50%);
+    width: 100%;
 }
+
 
 div[id="backbutton"]{
     position: absolute;
-    width: fit-content;
-    top: 6.25%;
-    transform: translate(0,-50%);
+    bottom: 1%;
+    left: 1%;
 }
+
+
+
+div[id="nextbutton"]{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+
 
 h1[id="fill"]{
     color: white;
+    font-size: clamp(14px, 3.5vh, 24px);
+    line-height: 1.0;
+    margin: 0;
+    text-align: center;
 }
 
 h1[id="B"]{
     color: white;
 }
+h1[id="N"]{
+    color: white;
+}
 button[id="back"]{
-    background-color: blue;
+    background-color: darkblue;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+button[id="next"]{
+    background-color: darkblue;
     padding: 5px 10px;
     border: none;
     border-radius: 10px;
@@ -61,5 +106,15 @@ button[id="back"]{
 button[id="back"]:hover{
     transition: 0.1s ease-in; background-color: 0.1s ease-in;
     transform: scale(1.05);
-    background-color: darkblue;
+    background-color: rgb(0,0,75);
+}
+button[id="next"]:hover{
+    transition: 0.1s ease-in; background-color: 0.1s ease-in;
+    transform: scale(1.05);
+    background-color: rgb(0,0,75);
+}
+
+input[id="ans"]:hover{
+    background-color: 0.2s ease-in;
+    background-color: darkgrey;
 }

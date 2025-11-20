@@ -64,7 +64,7 @@ img[id="profile-pic"]{
 }
 
 button[id="start"]{
-    background-color: blue;
+    background-color: darkblue;
     padding: 5px 10px;
     border: none;
     border-radius: 10px;
@@ -73,5 +73,5 @@ button[id="start"]{
 button[id="start"]:hover{
     transition: 0.1s ease-in; background-color: 0.1s ease-in;
     transform: scale(1.05);
-    background-color: darkblue;
+    background-color: rgb(0,0,75);
 }
