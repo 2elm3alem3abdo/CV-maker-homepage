@@ -29,30 +29,35 @@ div[id="QANSdivs"]{
     display: flex;
     flex-direction: column;
     margin-top: 5%;
+    width: 100%;
 }
 
 div[id="NextBackButtons"]{
     display: flex;
     flex-direction: row;
     margin-top: auto;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 98%;
 }
 
 div[id="ansdiv"]{
+    display: flex;
     margin-top: 10%;
+    width: 100%;
+    justify-content: center;
 }
 input[id="ans"]{
-    position: absolute;
     background-color: rgb(230,240,255);
     border-color: black;
     border-radius: 10px;
-    font-size: clamp(10%, 200%, 300%);
-    left: 50%;
-    transform: translate(-50%);
+    font-size: clamp(0.1rem, 4vh, 5rem);
     text-align: center;
 }
 h1{
     color: rgb(0, 0, 0);
     text-align: center;
+    font-size: clamp(0.1rem, 4vh, 5rem);
 }
 
 
@@ -62,23 +67,19 @@ div[id="InfoTitle"]{
 
 
 div[id="backbutton"]{
-    position: absolute;
-    bottom: 1%;
-    left: 1%;
+    
 }
 
 
 
 div[id="nextbutton"]{
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
+    
 }
 
 
 h1[id="fill"]{
     color: white;
-    font-size: clamp(5px, 3.5vh, 24px);
+    font-size: clamp(0.05vh, 3vh, 10vh);
     line-height: 1.0;
     margin: 0;
     text-align: center;

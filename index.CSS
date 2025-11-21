@@ -31,12 +31,23 @@ h1[id="desh1"]{
     font-size: 100%;
     text-align: center;
 }
+
+@keyframes shine-effect{
+    0%{
+        background-position: 200%;
+    }
+    100%{
+        background-position: -200%;
+    }
+}
+
 span{
-    background: linear-gradient(to right, darkblue, blue,lightblue,darkblue);
+    background: radial-gradient(circle, white 1%,blue 50%,blue 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    
+    background-size: 1000%;
+    animation: shine-effect 20s linear infinite;
 }
 
 div[id="description"]{
