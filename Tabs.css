@@ -25,12 +25,21 @@ div[id="PersonalInfoPage"]{
     align-items: center;
 }
 
+.question-step{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 100%;
+}
+
+/*
 div[id="QANSdivs"]{
     display: flex;
     flex-direction: column;
     margin-top: 5%;
     width: 100%;
 }
+*/
 
 div[id="NextBackButtons"]{
     display: flex;
