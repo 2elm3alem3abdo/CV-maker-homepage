@@ -12,7 +12,7 @@ body{
 }
 
 
-div[id="PersonalInfoPage"]{
+div[id="InfoPage"]{
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -56,12 +56,13 @@ div[id="ansdiv"]{
     width: 100%;
     justify-content: center;
 }
-input[id="ans"]{
+.ans{
     background-color: rgb(230,240,255);
     border-color: black;
     border-radius: 10px;
     font-size: clamp(0.1rem, 4vh, 5rem);
     text-align: center;
+    width: 90%;
 }
 h1{
     color: rgb(0, 0, 0);
@@ -74,8 +75,33 @@ div[id="InfoTitle"]{
     width: 100%;
 }
 
+div[id="eduinfo"]{
+    width: 100%;
+}
 
+div[id="counter"]{
+    background-color: darkblue;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+textarea[id="ans8"]{
+    resize: none;
+    width: 90%;
+}
+
+h1[id="c"]{
+    color: white;
+}
 h1[id="fill"]{
+    color: white;
+    font-size: clamp(0.05vh, 3vh, 10vh);
+    line-height: 1.0;
+    margin: 0;
+    text-align: center;
+}
+h1[id="edufill"]{
     color: white;
     font-size: clamp(0.05vh, 3vh, 10vh);
     line-height: 1.0;
@@ -113,7 +139,7 @@ button[id="next"]:hover{
     background-color: rgb(0,0,75);
 }
 
-input[id="ans"]:hover{
+.ans:hover{
     background-color: 0.2s ease-in;
     background-color: aliceblue;
 }
