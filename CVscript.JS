@@ -11,6 +11,11 @@ const EducationFrame = document.getElementById("EducationFrame")
 
 let currentindex = 0;
 
+function URLisValid(string){
+    var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return(res !=null)
+}
+
 if(startbutton){
     startbutton.addEventListener("click", PersonalInfoPage);
     function PersonalInfoPage(){
@@ -88,14 +93,30 @@ if(Nextbutton){
             return
         }
         
+        if(currentindex == 5 || currentindex == 6){
+            const urlval = steps[currentindex].querySelector("input");
+            const url = urlval.value.trim();
+
+            if(url !=="" && !URLisValid(url)){
+                alert("URL/Link provided is not Valid, skip or enter a valid Link");
+                urlval.style.borderColor = "red";
+                return;
+            }
+            else{
+                urlval.style.borderColor = "black";
+            }
+        }
+        
+
+
         if(currentindex == 8){
             const startdate = document.getElementById("ans10").value;
             const enddate = document.getElementById("ans11").value;
             if(startdate && enddate){
                 const startobj = new Date(startdate);
                 const endobj = new Date(enddate);
-                if(endobj<startobj){
-                    alert("end date can't be earlier than the start date");
+                if(endobj<=startobj){
+                    alert("end date can't be the same or earlier than the start date");
                     document.getElementById("ans10").style.borderColor = "red";
                     document.getElementById("ans11").style.borderColor = "red";
                     return
@@ -113,7 +134,9 @@ if(Nextbutton){
 
         steps[currentindex].style.display = "none";
         currentindex++;
+        steps.forEach(step => step.classList.remove("transformanim"));
         steps[currentindex].style.display = "flex";
+        steps.forEach(step => step.classList.add("transformanim"));
 
         const frameselection = steps[currentindex].getAttribute("data-section")
         if(frameselection == "Education"){
@@ -142,7 +165,9 @@ if(backbutton){
         
         steps[currentindex].style.display = "none";
         currentindex--;
+        steps.forEach(step => step.classList.remove("transformanim"));
         steps[currentindex].style.display = "flex";
+        steps.forEach(step => step.classList.add("transformanim"));
 
         const frameselection = steps[currentindex].getAttribute("data-section")
         if(frameselection == "Education"){

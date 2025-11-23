@@ -61,8 +61,8 @@ div[id="ansdiv"]{
     border-color: black;
     border-radius: 10px;
     font-size: clamp(0.1rem, 4vh, 5rem);
-    text-align: center;
     width: 90%;
+    resize: none;
 }
 h1{
     color: rgb(0, 0, 0);
@@ -84,11 +84,6 @@ div[id="counter"]{
     padding: 5px 10px;
     border: none;
     border-radius: 10px;
-}
-
-textarea[id="ans8"]{
-    resize: none;
-    width: 90%;
 }
 
 h1[id="c"]{
@@ -142,4 +137,19 @@ button[id="next"]:hover{
 .ans:hover{
     background-color: 0.2s ease-in;
     background-color: aliceblue;
+}
+
+@keyframes transformAnim{
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 2;
+        transform: scale(1.0);
+    }
+}
+
+.transformanim {
+    animation: transformAnim 0.4s cubic-bezier(0.4, 0.25, 0.6, 1.75);
 }
